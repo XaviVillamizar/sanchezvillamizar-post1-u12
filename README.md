@@ -1,0 +1,7 @@
+## Análisis de Impacto (Qué se descartó por sobreingeniería)
+
+Durante el desarrollo, se consideraron y descartaron las siguientes alternativas aplicando el principio YAGNI (You Aren't Gonna Need It) y la Regla de Tres:
+
+1. **Spring ApplicationEventPublisher en vez de Observer manual:** Se consideró publicar eventos de dominio (`PedidoProcesadoEvent`) con `@EventListener`. Se descartó porque, con exactamente tres observadores fijos y conocidos, la indirección adicional no aporta desacoplamiento real y dificulta rastrear la ejecución.
+2. **Visitor o Abstract Factory para exportar reportes:** Se consideró preparar el sistema para exportar a PDF y Excel construyendo una jerarquía de exportadores. Se descartó porque actualmente no existe ninguna solicitud real para esos formatos (no cumple la Rule of Three).
+3. **Jerarquía de Excepciones para Validadores (Aporte propio):** Se consideró crear excepciones específicas (`MontoExcedidoException`, `DocumentoFaltanteException`, `DuplicadoException`) para cada regla en lugar de usar un simple record `ResultadoValidacion`. Se descartó porque el controlador REST actual solo necesita devolver un HTTP 400 genérico con el motivo en texto; no existe lógica de recuperación diferenciada por error. Se reconsideraría si un cliente externo pidiera códigos de error estrictos para manejar flujos de UI distintos.
