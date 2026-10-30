@@ -15,4 +15,4 @@ public class ValidadorDuplicados extends ValidadorSolicitud {
                 ? ResultadoValidacion.rechazar("Ya existe una solicitud pendiente de la misma categoria en el periodo")
                 : ResultadoValidacion.ok();
     }
-} 
+}
