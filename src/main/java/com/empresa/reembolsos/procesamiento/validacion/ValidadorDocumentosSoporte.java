@@ -12,4 +12,4 @@ public class ValidadorDocumentosSoporte extends ValidadorSolicitud {
                 ? ResultadoValidacion.ok()
                 : ResultadoValidacion.rechazar("Faltan documentos soporte");
     }
-}
+} 

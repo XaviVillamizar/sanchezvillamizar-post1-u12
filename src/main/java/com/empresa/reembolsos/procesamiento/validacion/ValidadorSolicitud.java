@@ -21,4 +21,4 @@ public abstract class ValidadorSolicitud {
 
     protected abstract ResultadoValidacion validarPropio(
             SolicitudReembolso solicitud, List<SolicitudReembolso> pendientesDelEmpleado);
-}
+} 

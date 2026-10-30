@@ -1,4 +1,4 @@
-package com.empresa.reembolsos_integrado;
+package com.empresa.reembolsos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

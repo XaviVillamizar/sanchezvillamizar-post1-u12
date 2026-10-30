@@ -19,4 +19,4 @@ public class CadenaValidadores {
     public ResultadoValidacion validar(SolicitudReembolso solicitud, List<SolicitudReembolso> pendientes) {
         return primero.validar(solicitud, pendientes);
     }
-}
+} 

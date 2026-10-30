@@ -7,4 +7,4 @@ public record ResultadoValidacion(boolean valida, String motivoRechazo) {
     public static ResultadoValidacion rechazar(String motivo) {
         return new ResultadoValidacion(false, motivo);
     }
-}
+} 

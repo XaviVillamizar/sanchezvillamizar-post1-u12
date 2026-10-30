@@ -22,4 +22,4 @@ public class ValidadorMontoMaximo extends ValidadorSolicitud {
                 ? ResultadoValidacion.rechazar("Monto excede el tope de la categoria " + solicitud.getCategoria())
                 : ResultadoValidacion.ok();
     }
-}
+} 
